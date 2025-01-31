@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Tasks from './components/Task'
 import AddTasks from './components/AddTask'
+import ExercJs from './components/ExercJs'
 import {v4} from 'uuid'
 
 function App() {
@@ -58,7 +59,7 @@ function App() {
 
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
-      <div className="w-[500px] space-y-4">
+      <div className="w-[900px] space-y-4">
         <h1 className="text-3xl text-slate-100 font-bold text-center">Gerenciador de Tarefas</h1>
         <AddTasks ondAddTaskSubmit={ondAddTaskSubmit} />
         <Tasks 
@@ -66,6 +67,11 @@ function App() {
           onTaksClick={onTaksClick}
           onDeleteTaksClick={onDeleteTaksClick}
           />
+          <ExercJs
+          tasks={tasks} 
+          onTaksClick={onTaksClick}
+          onDeleteTaksClick={onDeleteTaksClick}
+           />
       </div>
       
     </div>
